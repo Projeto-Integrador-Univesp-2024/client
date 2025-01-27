@@ -51,7 +51,11 @@ const DashboardTaskTypesPage = ({ params }: DashboardTaskTypesPageProps) => {
       <Card className="w-full">
         <CardContent>
           <Table>
-            <TableCaption>Todas os tipos de tarefas cadastrados.</TableCaption>
+            <TableCaption>
+              {taskTypes && taskTypes.length !== 0
+                ? "Todos os tipos de tarefas cadastrados."
+                : "Nenhum tipo de tarefa cadastrado."}
+            </TableCaption>
             <TableHeader>
               <TableRow>
                 <TableHead>Nome</TableHead>

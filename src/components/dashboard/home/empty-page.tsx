@@ -8,7 +8,7 @@ const DashboardHomeEmptyPage = () => {
         Você não possui nenhuma criança cadastrada!
       </h1>
       <Button asChild>
-        <Link href={`childs`}>Cadastrar criança</Link>
+        <Link href={`dashboard/childs`}>Cadastrar criança</Link>
       </Button>
     </div>
   );

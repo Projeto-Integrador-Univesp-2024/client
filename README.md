@@ -1,36 +1,150 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **Documentação do Frontend**
 
-## Getting Started
+Bem-vindo à documentação oficial do projeto **Jornada na Educação Financeira Infantil**. 
+Este documento fornece informações sobre a arquitetura do projeto, dependências, comandos de execução e boas práticas.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## **1. Visão Geral**
+- **Linguagem**: Typescript
+- **Framework**: Next.js *(v14.2.8)*
+- **UI**: TailwindCSS + Radix UI (Shadcn/UI)
+- **Gerenciamento de Estado**: React Query
+- **Validação de Formulário**: React Hook Form + Zod
+- **Autenticação**: NextAuth
+
+---
+
+## **2. Estrutura do Projeto**
+A estrutura do frontend segue um modelo modular:
+```
+└── 📁client
+	└── 📁public
+		└── 📁img
+		└── 📁svg
+	└── 📁src
+		└── 📁action
+		└── 📁app
+			└── 📁(home)
+				└── 📁[userId]
+					└── 📁app
+						└── layout.tsx
+						└── page.tsx
+						└── 📁settings
+							└── page.tsx
+						└── 📁tasks
+							└── page.tsx
+					└── 📁dashboard
+						└── 📁childs
+							└── 📁[childId]
+								└── page.tsx
+							└── page.tsx
+						└── 📁goals
+							└── 📁[goalId]
+								└── page.tsx
+							└── page.tsx
+						└── layout.tsx
+						└── page.tsx
+						└── 📁products
+							└── page.tsx
+						└── 📁task-types
+							└── 📁[taskTypeId]
+								└── page.tsx
+							└── page.tsx
+						└── 📁tasks
+							└── 📁[taskId]
+								└── page.tsx
+							└── page.tsx
+				└── 📁auth
+					└── 📁signin
+						└── page.tsx
+					└── 📁signup
+						└── page.tsx
+				└── layout.tsx
+				└── page.tsx
+			└── 📁api
+				└── 📁auth
+					└── 📁[...nextauth]
+						└── route.ts
+			└── globals.css
+			└── layout.tsx
+		└── 📁components
+			└── 📁app
+			└── 📁auth
+			└── 📁dashboard
+			└── 📁ui
+		└── 📁hooks
+			└── 📁data
+			└── 📁home
+			└── use-toast.ts
+		└── 📁lib
+			└── constants.ts
+			└── utils.ts
+		└── 📁schemas
+			└── 📁auth
+			└── 📁dashboard
+		└── 📁types
+	└── .env
+	└── middleware.ts
+	└── next-env.d.ts
+	└── next.config.mjs
+	└── package.json
+	└── postcss.config.mjs
+	└── README.md
+	└── tailwind.config.ts
+	└── tsconfig.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## **3. Configuração do Ambiente**
 
-## Learn More
+### **3.1 Pré-requisitos**
+- Node.js v18 ou superior
 
-To learn more about Next.js, take a look at the following resources:
+### **3.2 Variáveis de Ambiente**
+Crie um arquivo `.env` na raiz do projeto seguindo o formato do .env.example
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### **3.3 Executando o Projeto**
+1. Clone o projeto:
+	```bash
+			git clone https://github.com/Projeto-Integrador-Univesp-2024/frontend.git
+		```
+2. Entre na raiz do projeto:
+	```bash
+		cd frontend
+	```
+3. Instale as dependências:
+	```bash
+		npm install
+	```
+4. Execute o servidor
+	```bash
+		npm run dev
+	```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### **3.4 Rodar em Produção**
+1. Instalar dependências
+	```bash
+		npm install
+	```
+2. Gerar Build
+	```bash
+		npm run build
+	```
+1. Rodar a Aplicação em Produção
+	```bash
+		npm run start
+	```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## **4. Boas Práticas**
+- Utilize mensagens de commit padronizadas
+- Execute npm run lint antes de criar um pull request.
+- Crie o commit com o comando `npm run commit`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+© 2025 Jornada na Educação Financeira Infantil. Todos os direitos reservados.

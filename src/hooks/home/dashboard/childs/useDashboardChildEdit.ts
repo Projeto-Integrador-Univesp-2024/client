@@ -7,6 +7,7 @@ import {
 } from "@/schemas/dashboard/childs/child-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
+import { redirect } from "next/navigation";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 
@@ -52,6 +53,8 @@ const useDashboardChildEdit = (childId: string, guardianId: string) => {
         title: "Operação bem-sucedida",
         variant: "success",
       });
+
+      return redirect('')
     },
     onError: (error: { message: string }) => {
       toast({

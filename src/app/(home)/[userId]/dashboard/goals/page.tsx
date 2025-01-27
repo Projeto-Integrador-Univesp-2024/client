@@ -51,7 +51,11 @@ const DashboardGoalsPage = ({ params }: DashboardGoalsPageProps) => {
       <Card className="w-full">
         <CardContent>
           <Table>
-            <TableCaption>Todas os objetivos cadastrados.</TableCaption>
+            <TableCaption>
+              {goals && goals.length !== 0
+                ? "Todos os objetivos cadastrados."
+                : "Nenhum objetivo cadastrado."}
+            </TableCaption>
             <TableHeader>
               <TableRow>
                 <TableHead>Titulo</TableHead>

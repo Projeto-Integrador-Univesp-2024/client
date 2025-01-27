@@ -51,7 +51,11 @@ const DashboardChildsPage = ({ params }: DashboardChildsPageProps) => {
       <Card className="w-full">
         <CardContent>
           <Table>
-            <TableCaption>Todas as crianças cadastradas.</TableCaption>
+            <TableCaption>
+              {children && children.length !== 0
+                ? "Todas as crianças cadastradas."
+                : "Nenhuma criança cadastrada."}
+            </TableCaption>
             <TableHeader>
               <TableRow>
                 <TableHead className="w-[150px]">Avatar</TableHead>
