@@ -1,9 +1,9 @@
 import { useFindOneChild } from "../../data/useChild";
 
 const useUserPage = (publicId: string) => {
-  const { data: userChild, isLoading, isError } = useFindOneChild(publicId);
+	const { data: userChild, isLoading, isError } = useFindOneChild(publicId);
 
-  return { userChild, isLoading, isError };
+	return { userChild, isLoading, isError };
 };
 
 export default useUserPage;

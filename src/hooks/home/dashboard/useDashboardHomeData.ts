@@ -5,24 +5,24 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const useDashboardHomeData = (guardianId: string) => {
-  const [lastTasksFilter, setLastTasksFilter] =
-    useState<MetricsType.LastTasksFilter>("all");
-  const { status } = useSession();
-  const router = useRouter();
+	const [lastTasksFilter, setLastTasksFilter] =
+		useState<MetricsType.LastTasksFilter>("all");
+	const { status } = useSession();
+	const router = useRouter();
 
-  if (status === "unauthenticated") {
-    router.push("~/auth/signin");
-  }
+	if (status === "unauthenticated") {
+		router.push("~/auth/signin");
+	}
 
-  const { data: metrics, isLoading, isError } = useFindMetrics(guardianId);
+	const { data: metrics, isLoading, isError } = useFindMetrics(guardianId);
 
-  return {
-    metrics,
-    lastTasksFilter,
-    isLoading,
-    isError,
-    setLastTasksFilter,
-  };
+	return {
+		metrics,
+		lastTasksFilter,
+		isLoading,
+		isError,
+		setLastTasksFilter,
+	};
 };
 
 export default useDashboardHomeData;
