@@ -9,16 +9,16 @@ import { Toaster } from "@/components/ui/toaster";
 const queryClient = new QueryClient();
 
 const HomeLayout = ({ children }: { children: ReactNode }) => {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <SessionProvider>
-        <TooltipProvider>
-          {children}
-          <Toaster />
-        </TooltipProvider>
-      </SessionProvider>
-    </QueryClientProvider>
-  );
+	return (
+		<QueryClientProvider client={queryClient}>
+			<SessionProvider>
+				<TooltipProvider>
+					{children}
+					<Toaster />
+				</TooltipProvider>
+			</SessionProvider>
+		</QueryClientProvider>
+	);
 };
 
 export default HomeLayout;
