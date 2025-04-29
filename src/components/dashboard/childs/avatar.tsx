@@ -51,7 +51,7 @@ const DashboardChildAvatar = ({ form }: DashboardChildAvatarProps) => {
                   {avatars.map((avatar, index) => (
                     <ToggleGroupItem
                       aria-label="Toggle bold"
-                      className="cursor-pointer bg-transparent hover:bg-transparent data-[state]:bg-transparent"
+                      className="cursor-pointer bg-transparent hover:bg-transparent data-state:bg-transparent"
                       key={index}
                       value={avatar}
                       asChild

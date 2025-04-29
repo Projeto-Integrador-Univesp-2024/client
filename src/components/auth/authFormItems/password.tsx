@@ -32,7 +32,7 @@ export const PasswordAuthFormItem = ({ field }: PasswordAuthFormItemProps) => {
           <button
             type="button"
             onClick={() => setShowPassword(!showPassword)}
-            className="absolute right-2 text-stone-800 focus:outline-none"
+            className="absolute right-2 text-stone-800 focus:outline-hidden"
           >
             {showPassword ? (
               <EyeOff className="h-5 w-5" />
