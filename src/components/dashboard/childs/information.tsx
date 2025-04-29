@@ -93,7 +93,7 @@ const DashboardChildInformation = ({
                     <button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-2 text-stone-600 focus:outline-none"
+                      className="absolute right-2 text-stone-600 focus:outline-hidden"
                     >
                       {showPassword ? (
                         <EyeOff className="h-5 w-5" />
